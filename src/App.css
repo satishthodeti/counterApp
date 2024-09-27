@@ -1,0 +1,108 @@
+/* Body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f3ec78, #af4261);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #af4261;
+  display: block;
+  margin: 10px auto 0 auto;
+  border-radius: 5px;
+}
+
+/* Counter text styling */
+p {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 10px 0;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+p.count-change {
+  animation: scaleUp 0.3s ease-out;
+}
+
+/* Button styling */
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #af4261;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #f3ec78;
+  color: #af4261;
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Bounce effect for buttons */
+button:focus {
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
